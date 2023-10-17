@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:main/pallete.dart';
 import 'logInScreen.dart';
 
 void main() {
@@ -13,7 +12,7 @@ class MyApp extends StatelessWidget {
       title: 'HemaLens',
       debugShowCheckedModeBanner: false,
       theme: ThemeData.dark().copyWith(
-        scaffoldBackgroundColor: Pallete.backgroundColor,
+        scaffoldBackgroundColor: Colors.white,
       ),
       home: const LoginScreen(),
     );

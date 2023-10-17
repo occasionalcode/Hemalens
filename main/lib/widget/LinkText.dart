@@ -5,17 +5,24 @@ class LinkText extends StatelessWidget {
   final label;
   final Color pallete;
   final double fontSize;
+  final Widget routeName;
+
   const LinkText(
       {super.key,
       required this.label,
       this.pallete = Pallete.forgotPass,
-      this.fontSize = 14});
+      this.fontSize = 14,
+      required this.routeName});
 
   @override
   Widget build(BuildContext context) {
-    return InkWell(
+    return GestureDetector(
       onTap: () {
-        print("he");
+        Navigator.push(
+            context,
+            MaterialPageRoute(
+              builder: (context) => routeName,
+            ));
       },
       child: Text(
         label,
