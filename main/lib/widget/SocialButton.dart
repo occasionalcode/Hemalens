@@ -4,14 +4,21 @@ import 'package:main/pallete.dart';
 class Socialbutton extends StatelessWidget {
   final String label;
   final double horizontalPadding;
+  final Widget routeName;
   const Socialbutton(
-      {Key? key, required this.label, this.horizontalPadding = 150})
+      {Key? key,
+      required this.label,
+      this.horizontalPadding = 150,
+      required this.routeName})
       : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return TextButton(
-      onPressed: () {},
+      onPressed: () {
+        Navigator.push(
+            context, MaterialPageRoute(builder: (context) => routeName));
+      },
       child: Text(
         label,
         style: TextStyle(
