@@ -5,10 +5,18 @@ class Socialbutton extends StatelessWidget {
   final String label;
   final double horizontalPadding;
   final Widget routeName;
+  final double borderRadius;
+  final double verticalPadding;
+  final double fontSize;
+  final Color bgColor;
   const Socialbutton(
       {Key? key,
       required this.label,
       this.horizontalPadding = 150,
+      this.verticalPadding = 26,
+      this.borderRadius = 8,
+      this.fontSize = 15,
+      this.bgColor = Pallete.almostBlack,
       required this.routeName})
       : super(key: key);
 
@@ -22,15 +30,17 @@ class Socialbutton extends StatelessWidget {
       child: Text(
         label,
         style: TextStyle(
-            fontFamily: "UrbanistSB", fontSize: 15, color: Pallete.whiteColor),
+            fontFamily: "UrbanistSB",
+            fontSize: fontSize,
+            color: Pallete.whiteColor),
       ),
       style: TextButton.styleFrom(
-          padding:
-              EdgeInsets.symmetric(vertical: 26, horizontal: horizontalPadding),
+          padding: EdgeInsets.symmetric(
+              vertical: verticalPadding, horizontal: horizontalPadding),
           shape: RoundedRectangleBorder(
-              side: const BorderSide(color: Pallete.almostBlack),
-              borderRadius: BorderRadius.circular(8)),
-          backgroundColor: Pallete.almostBlack),
+              side: BorderSide(color: bgColor),
+              borderRadius: BorderRadius.circular(borderRadius)),
+          backgroundColor: bgColor),
     );
   }
 }

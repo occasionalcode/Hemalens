@@ -6,6 +6,7 @@ import "package:main/widget/SocialButton.dart";
 import 'package:main/widget/LinkText.dart';
 import 'package:main/widget/HorizontalLine.dart';
 import 'package:main/notAvailable.dart';
+import 'package:main/cameraScreen.dart';
 
 class LoginScreen extends StatelessWidget {
   const LoginScreen({super.key});
@@ -127,7 +128,7 @@ class LoginScreen extends StatelessWidget {
                   ),
                   const Socialbutton(
                     label: "Login",
-                    routeName: NotAvailable(),
+                    routeName: CameraScreen(),
                   ),
                   const Divider(
                     height: 68,
